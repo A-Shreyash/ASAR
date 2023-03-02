@@ -1,0 +1,29 @@
+.recharts-legend-item-text {
+    color: #ffffff ;
+}
+
+.containerCard{
+    padding: 38px;
+
+    .titleCard {
+        padding-bottom: 20px;
+
+        .title {
+            color: #292B2C;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .buttonSqaure {
+            float: right;
+            border: 1px solid #DDDDDD;
+            border-radius: 4px;
+            color: #74797B;
+        }
+    }
+
+    .pieChart {
+        position: relative;
+        left: 25%;
+    }
+}

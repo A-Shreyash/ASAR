@@ -1,0 +1,90 @@
+body {
+    font-family: "Helvetica Neue" !important;
+}
+
+.logo {
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    padding: 20px 10px 20px 20px;
+    text-align: layout;
+}
+
+.ant-layout-sider-children {
+  background-color: #292b3c;
+}
+
+.components-layout-demo-custom-trigger .trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.components-layout-demo-custom-trigger .trigger:hover {
+  color: #465def;
+}
+
+.anticon[tabindex] {
+  color: #ffffff;
+  padding-left: 15px;
+}
+
+.ant-menu {
+  color: #74797b !important;
+}
+
+.ant-menu-item-active {
+  color: #465def !important;
+}
+
+.ant-menu-submenu-title {
+    color: #74797b !important;
+    .ant-menu-submenu-arrow {
+        color: #74797b !important; 
+    }
+}
+
+.ant-menu-submenu-title:hover {
+    color: #465def !important;;
+    .ant-menu-submenu-arrow::before, .ant-menu-submenu-arrow::after {
+        background: #465def !important;
+    }
+}
+
+.iconMenu svg path {
+    fill: #ffffff !important;
+}
+.iconDashboard {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/icon-bike-black.svg);
+}
+
+.ant-menu-item-selected,
+.ant-menu-item-selected a,
+.ant-menu-item-selected a:hover {
+  color: #465def !important;
+}
+
+.ant-menu-inline .ant-menu-item:after,
+.ant-menu-vertical-left .ant-menu-item:after,
+.ant-menu-vertical-right .ant-menu-item:after,
+.ant-menu-vertical .ant-menu-item:after {
+  border-right-color: #465def !important;
+}
+
+.components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(0, 0, 0, 0.3);
+}
+.site-layout .site-layout-background {
+  background: #292b3c;
+}
+
+.site-layout .site-layout-background-content {
+  background: #41435c;
+  border-radius: 20px;
+  box-shadow: 0px 0px 31px -3px rgba(66, 113, 255, 0.2);
+  height: 100%;
+}

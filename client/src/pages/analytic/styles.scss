@@ -1,0 +1,62 @@
+.container {
+    background: #5f627c;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px rgba(68, 90, 210, 0.04);
+    height: 100%;
+    padding: 20px;
+    overflow-x: none !important;
+
+    .card {
+      background: #292B2C;
+      border-radius: 8px;
+      box-shadow: 0px 0px 30px rgba(68, 90, 210, 0.04);
+      height: 100%;
+      // border: solid 1px #445AD2;
+    }
+
+    .complaintIcon {
+      color: #ffffff;
+      padding-top: 4px;
+    }
+
+    .menu {
+      color: #ffffff;
+      font-weight: 700;
+      padding-left: 8px;
+    }
+
+    .titleContainer {
+      padding-bottom: 10px;
+
+      .title {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 28px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .buttonDownload {
+        background-color: #4ab1ff ;
+        border-radius: 4px;
+        float: right;
+        text-align: right;
+      }
+    }
+    
+}
+
+.container-form{
+  background: #00000070;
+  border-radius: 8px;
+  box-shadow: 0px 0px 30px rgba(68, 90, 210, 0.04);
+  height: 90%;
+  padding: 50px 30px 50px 30px;
+  overflow-x: none !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+

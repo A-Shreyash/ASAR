@@ -1,0 +1,33 @@
+@media print {
+    @page { size: landscape; }
+}
+
+.recharts-legend-item-text {
+    color: #f8f8f8 !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.containerCard{
+    padding: 38px;
+
+    .titleCard {
+        padding-bottom: 20px;
+
+        .title {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        
+        .buttonSqaure {
+            float: right;
+            border: 1px solid #DDDDDD;
+            border-radius: 4px;
+            color: #74797B;
+        }
+    }
+
+    .barChart {
+        position: relative;
+    }
+}
