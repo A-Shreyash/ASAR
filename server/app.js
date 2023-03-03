@@ -1,47 +1,43 @@
-const express = require('express');
-const app=express();
-let port =3000;
-const path = require('path');
-const empCollection=require('./model/model');
 
-const temp=path.join(__dirname,'logsign');
+const express = require("express");
+const app = express();
+require("dotenv").config();
+const mongoose = require("mongoose");
+const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
-app.set('view engine','hbs');
-app.set('views',temp);
-require('./db/db');
+const authRouter = require("./routes/auth");
 
-app.use(express.urlencoded({extended:false}));
-app.get('/',(req,res)=>{
-    res.render('login.hbs')
-})
-// app.post('/',(req,res)=>{
-//     res.render('signin')
-// })
-app.post('/empdata',async(req,res)=>{
+const { loginCheck } = require("./middleware/auth");
 
-    try {
-        const password=req.body.password;
-        const cpassword=req.body.cpassword;
-        if(password===cpassword){
-            const empData=new empCollection({
-                name:req.body.name,
-                email:req.body.email,
-                password:req.body.password,
-                cpassword:req.body.cpassword
-            });
-            const postData=await empData.save();
-            res.send(postData);
-        }else{
-            res.send("Password not matching...")
-        }
-        
-    } catch (error) {
-        res.send(error);
-    }
 
-    console.log(req.body.name);
-    res.send(req.body.name);
-})
-app.listen(port,()=>{
-    console.log('listing to the port ${port}');
-})
+
+// Database Connection
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() =>
+    console.log(
+      "==============Mongodb Database Connected Successfully=============="
+    )
+  )
+  .catch((err) => console.log("Database Not Connected !!!"));
+
+app.use(morgan("dev"));
+app.use(cookieParser());
+app.use(cors());
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+app.use("/api", authRouter);
+
+
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, () => {
+  console.log("Server is running on ", PORT);
+});
